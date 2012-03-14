@@ -4,7 +4,7 @@
 Summary: Graphical system installer
 Name:    anaconda
 Version: 13.21.149
-Release: 1%{?dist}
+Release: 1%{?dist}.goose.1
 License: GPLv2+
 Group:   Applications/System
 URL:     http://fedoraproject.org/wiki/Anaconda
@@ -16,6 +16,7 @@ URL:     http://fedoraproject.org/wiki/Anaconda
 # ./configure
 # make dist
 Source0: %{name}-%{version}.tar.bz2
+Patch1001: 1001-adding-a-goose-installclass.patch
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -164,6 +165,7 @@ system.  These files are of little use on an already installed system.
 
 %prep
 %setup -q
+%patch1001 -p1 -b .goose
 
 %build
 %configure --disable-static
