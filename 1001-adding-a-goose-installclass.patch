@@ -43,6 +43,8 @@ index 0000000..91bd8d9
 +
 +from constants import *
 +
++BETANAG = 1
++
 +class InstallClass(RHELInstallClass):
 +    # make sure the translation data is read from product.img tree
 +    if os.path.isdir("/tmp/product/locale"):
@@ -54,8 +56,8 @@ index 0000000..91bd8d9
 +    id = "goose"
 +    sortPriority = 90000
 +    name = N_("GoOSe")
-+    _description = N_("Please pick the type of install for %s. "
-+                     "You can optionally select a different set of software "
++    _description = N_("Please pick the %s install type."
++                     "Or optionally select a different set of software "
 +                     "now.")
 +    hidden = 0
 +
