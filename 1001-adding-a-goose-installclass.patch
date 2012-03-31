@@ -13,7 +13,7 @@ new file mode 100644
 index 0000000..91bd8d9
 --- /dev/null
 +++ b/installclasses/goose.py
-@@ -0,0 +1,164 @@
+@@ -0,0 +1,155 @@
 +#
 +# goose.py
 +#
@@ -169,6 +169,6 @@ index 0000000..91bd8d9
 +    def _get_description(self):
 +        return gettext.ldgettext("comps", self._description) % self._descriptionFields
 +    description = property(_get_description)
--- 
+---
 1.7.7.6
 
