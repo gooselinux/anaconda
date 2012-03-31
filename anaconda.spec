@@ -4,7 +4,7 @@
 Summary: Graphical system installer
 Name:    anaconda
 Version: 13.21.82
-Release: 1%{?dist}.goose.2
+Release: 1%{?dist}.goose.3
 License: GPLv2+
 Group:   Applications/System
 URL:     http://fedoraproject.org/wiki/Anaconda
@@ -223,6 +223,9 @@ update-desktop-database &> /dev/null || :
 %endif
 
 %changelog
+* Sat Mar 31 2012 Clint Savage <herlo@gooseproject.org> - 13.21.82-1.goose.3
+- Updated the 1001 patch to remove missing groups
+
 * Wed Mar 28 2012 Clint Savage <herlo@gooseproject.org> - 13.21.82-1.goose.2
 - Updated goose.py to include the BETANAG
 
